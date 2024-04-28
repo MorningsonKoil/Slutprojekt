@@ -1,0 +1,116 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+background-image: Url(Images/IQ_Background_Notes.png);
+background-size: cover;
+}
+
+/*Here is the code for the header. Decided to start off with it.*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/*Now the actual main code*/
+
+/* This is a neat little trick. Essentially, what's being done, is since all 3 of the divs share the "contact" as a common class between them, and since the contact class is within the box div, I can essentially use grid-area to specify the areas within the box where these 3 seperate divs will be. Basically dividing up the box and allocating each div in it's own little locked up location */
+
+.form{
+    grid-area: form;
+    }
+
+    
+.info{
+grid-area: info;
+        }
+
+ .map{
+grid-area: map;
+    }
+.contact{
+padding: 40px;
+background: #fff;
+}
+            
+.box{
+position: relative;
+display: grid;
+grid-template-columns: 2fr 1fr;
+grid-template-rows: 5fr 4fr;
+grid-template-areas:
+"form info"
+"form map";
+grid-gap: 20px;
+}
+
+
+/* Media Query for Screens 440px and below */
+@media (max-width: 440px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px;
+    }
+}
