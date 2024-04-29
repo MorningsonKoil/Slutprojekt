@@ -92,8 +92,73 @@ grid-template-areas:
 grid-gap: 20px;
 }
 
+.contact h3{
+font-weight: bold;
+font-size: 1.4em;
+margin-bottom: 10px;
+}
 
-/* Media Query for Screens 440px and below */
+/* Now for the CSS relating to the Information lines for sending a message, or simply put, the info box */
+
+.formBox{
+position: relative;
+width: 100%;
+}
+
+.formBox .row50{
+display: flex;
+gap: 20px;
+}
+
+.inputBox{
+display: flex;
+flex-direction: column; /* I don't even know how this fixed the design but it did */
+margin-bottom: 10px;
+width: 50%;
+}
+
+.formBox .row100 .inputBox{
+width: 100%;
+}
+
+.inputBox span{
+color: #000000;
+margin-top: 10px;
+margin-bottom: 5px;
+font-weight: bold;
+}
+
+.inputBox input{
+padding: 10px;
+font-size: 1.1en;
+outline: none;
+border: 1px solid #000000;
+}
+
+.inputBox textarea{
+padding: 15px;
+font-size: 1.3en;
+outline: none;
+border: 1px solid #000000;
+resize: none;  /* Remove this and you'll notice the box, as textareas conventionally are, is adjustable in size by the user. Needed to eliminate that */
+min-height: 180px;
+}
+
+.inputBox input[type="submit"]
+{
+max-width: 120px;
+font-weight: bold;
+border: none;
+cursor: pointer;
+padding: 14px 15px;
+}
+
+.inputBox ::placeholder{
+color: #716b6b;
+}
+
+
+/* Media Query for Screens 440px and below - as of now just for the burger-menu*/
 @media (max-width: 440px) {
     .menu-toggle {
         display: flex;
