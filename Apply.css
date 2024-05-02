@@ -1,0 +1,95 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+background-image: Url(Images/IQ_Background_Notes.png);
+background-size: cover;
+min-height: 100vh;
+}
+
+/*Here is the code for the header. Decided to start off with it.*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar{
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container h3{
+color: white;
+    }
+
+/* Media Query for Screens 450px and below */
+@media (max-width: 450px) {
+
+    .menu-toggle{
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px;
+    }
+}
