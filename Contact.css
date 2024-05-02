@@ -157,6 +157,46 @@ padding: 14px 15px;
 color: #716b6b;
 }
 
+/* Information section*/
+
+.info h3{
+font-weight: bold;
+}
+
+.info .infoBox div{
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.info .infoBox div span{
+min-width: 40px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 15px;
+font-size: 1.3em;
+}
+
+.info .infoBox div p{
+    font-size: 1.1em;
+}
+
+.info .infoBox div a{
+    text-decoration: none;
+    font-size: 1.05em;
+    }
+
+.map{
+padding: 0;
+}
+
+.map iframe{
+width: 100%;
+height: 100%;
+}
+
 
 /* Media Query for Screens 440px and below - as of now just for the burger-menu*/
 @media (max-width: 440px) {
@@ -177,5 +217,38 @@ color: #716b6b;
     nav ul li {
         text-align: center;
         padding: 10px;
+    }
+.contactUs{
+padding: 20px;
+}
+
+.box{
+grid-template-columns: 1fr;
+grid-template-rows: auto;
+grid-template-areas:
+"form"
+"info"
+"map";
+}
+
+.formBox .row50{
+display: flex;
+gap: 0;
+flex-direction: column;
+}
+.inputBox{
+display: flex;
+flex-direction: column;
+margin-bottom: 10px;
+width: 100%;
+}
+
+.contact{
+padding: 30px;
+}
+
+.map{
+    min-height: 300px;
+    padding: 30px;
     }
 }
