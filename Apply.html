@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/e45cc854d6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="Apply.css">
+    <title>Apply</title>
+</head>
+<body>
+    <header>
+            <div class="logo">
+                <img src="Images\IQ_Logo_White.png" alt="Logo">
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Find Us</a></li>
+                    <li><a href="Curriculum.html">Curriculum</a></li>
+                    <li><a href="Welcome.html">Welcome</a></li>
+                    <li><a href="Apply.html">Apply</a></li>
+                </ul>
+            </nav>
+        <script>
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navUl = document.querySelector('nav ul');
+    
+            mobileMenu.addEventListener('click', () => {
+                navUl.classList.toggle('active');
+            });
+        </script>
+<h2>Fill In Your Information!</h2>
+</header>
+<section class="container">
+<h3>Registration Form</h3>
+<form action="#" class="form">
+ <div class="input-box">
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter Full Name"/>
+ </div>
+ <div class="input-box">
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter Full Name"/>
+ </div>
+</form> 
+</section>
+</body>
