@@ -9,87 +9,134 @@ body{
 background-image: Url(Images/IQ_Background_Notes.png);
 background-size: cover;
 min-height: 100vh;
-}
-
-/*Here is the code for the header. Decided to start off with it.*/
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-}
-
-.logo img {
-    height: 50px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    padding: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #ccc;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle .bar{
-    background-color: #fff;
-    height: 3px;
-    width: 25px;
-    margin: 3px 0;
-    transition: 0.3s;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
 }
 
 .container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
+
 .container h3{
-color: white;
-    }
+font-size: 1.5rem;
+color: #333;
+font-weight: bold;
+text-align: center;
+}
 
-/* Media Query for Screens 450px and below */
-@media (max-width: 450px) {
+.container .form{
+margin-top: 30px;
+}
 
-    .menu-toggle{
-        display: flex;
-    }
+.form .input-box{
+width: 100%;
+margin-top: 20px;
+}
 
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-    }
+.input-box label{
+color: #333;
+}
 
-    nav ul.active {
-        display: flex;
-    }
+.input-box input:focus{
+box-shadow: 0 1px 0 rgba(0,0,0,0.5);
+}
+.form :where(.input-box input, .select-box){
+position: relative;
+height: 50px;
+width: 100%;
+outline: none;
+border: 1px solid #ddd;
+border-radius: 6px;
+padding: 0 15px;
+font-size: 1rem;
+color: #707070;
+margin-top: 8px;
+}
 
-    nav ul li {
-        text-align: center;
-        padding: 10px;
-    }
+.form .column{
+display: flex;
+column-gap: 15px;
+}
+
+.form :where(.gender-options, .gender){
+display: flex;
+align-items: center;
+column-gap: 50px;
+flex-wrap: wrap;
+}
+
+.form .gender{
+column-gap: 5px;
+cursor: pointer;
+}
+
+.gender input{
+accent-color: red;
+}
+
+.form .gender-box{
+margin-top: 20px;
+}
+
+.gender-box h2{
+color: #333;
+font-size: 1rem;
+font-weight: 400;
+margin-bottom: 8px;
+}
+
+.form :where(.gender input, .gender label){
+cursor: pointer;
+}
+
+.address :where(input, .select-box){
+margin-top: 20px;
+
+}
+
+.select-box select{
+height: 100%;
+width: 100%;
+outline: none;
+border: none;
+color: #707070;
+font-size: 1rem;
+}
+
+.form button{
+height: 55px;
+width: 100%;
+font-size: 1rem;
+background-color: beige;
+font-weight: bold;
+color: black;
+margin-top: 20px;
+cursor: pointer;
+BORDER-RADIUS: 8px;
+}
+
+.form button:hover{
+transition: all 0.4s ease;
+background-color:aquamarine;
+}
+
+/* Responsive Code for screens 450px and below */
+
+@media screen and (max-width: 450px){
+
+.form-column{
+flex-wrap: wrap;
+}
+
+.form :where(.gender-options, .gender){
+row-gap: 15px;
+}
 }
