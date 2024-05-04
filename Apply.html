@@ -9,45 +9,77 @@
     <title>Apply</title>
 </head>
 <body>
-    <header>
-            <div class="logo">
-                <img src="Images\IQ_Logo_White.png" alt="Logo">
-            </div>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="Contact.html">Find Us</a></li>
-                    <li><a href="Curriculum.html">Curriculum</a></li>
-                    <li><a href="Welcome.html">Welcome</a></li>
-                    <li><a href="Apply.html">Apply</a></li>
-                </ul>
-            </nav>
-        <script>
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navUl = document.querySelector('nav ul');
-    
-            mobileMenu.addEventListener('click', () => {
-                navUl.classList.toggle('active');
-            });
-        </script>
-<h2>Fill In Your Information!</h2>
-</header>
+
 <section class="container">
 <h3>Registration Form</h3>
 <form action="#" class="form">
  <div class="input-box">
-    <label>Full Name</label>
-    <input type="text" placeholder="Enter Full Name"/>
+    <label>Full Name *</label>
+    <input type="text" placeholder="Enter Full Name" required/>
  </div>
  <div class="input-box">
-    <label>Full Name</label>
-    <input type="text" placeholder="Enter Full Name"/>
+    <label>Email Address</label>
+    <input type="text" placeholder="BananaWarrior12@gmail.com..." required/>
  </div>
+
+ <div class="column">
+    <div class="input-box">
+        <label>Phone Number</label>
+        <input type="number" placeholder="+971 49 58 10...." required/>
+ </div>
+
+ <div class="input-box">
+    <label>Birth Date *</label>
+    <input type="date" placeholder="Enter Your Birth Date" required/>
+</div>
+</div>
+
+<div class="gender-box">
+<h2>Gender</h2>
+<div class="gender-options">
+
+ <div class="gender">
+<input type="radio" name="gender"  id="check-male" checked/>
+<label for="check-male">Male</label>
+ </div>
+
+ <div class="gender">
+    <input type="radio" name="gender" id="check-female"/>
+    <label for="check-female">Female</label>
+     </div>
+
+     <div class="gender">
+        <input type="radio" name="gender" id="check"/>
+        <label for="check-other">Other</label>
+         </div>
+
+ <div class="gender">
+<input type="radio" name="gender" id="check-prefer"/>
+<label for="check-prefer">Prefer Not To Answer</label>
+ </div>
+</div>
+</div>
+
+<div class="input-box address">
+    <label>Address</label>
+    <input type="text" placeholder="Enter Your Address *" required/>
+    <input type="text" placeholder="Enter Your Ort *" required/>
+    <div class="select-box">
+        <select required>
+        <option>How do you want to be contacted? *</option>
+        <option>Email</option>
+        <option>Phone Number</option>
+        <option>You Will Reach Out On Our Platforms</option> 
+        </select>
+        </div>
+    <input type="number" placeholder="Enter Your Postal Code *"required/>
+    <input type="text" placeholder="Enter Your C/o" />
+    <input type="text" placeholder="Enter Your Personal Number *"required/>
+</div>
+
+<button>Submit</button>
 </form> 
 </section>
 </body>
+
+ 
