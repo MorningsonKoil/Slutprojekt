@@ -1,1 +1,104 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+header{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background: #333;
+z-index: 100;
+}
+
+.flex{
+display: flex;
+align-items: center;
+}
+
+.container{
+max-width: 1200px;
+width: 100%;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.logo img {
+    height: auto;  /* maintain aspect ratio */
+    width: 75px;  /* or any size that fits well in your header */
+}
+
+
+.navbar{
+justify-content: space-between;
+}
+
+.nav-links{
+    gap: 20px;
+   list-style: none;
+}
+
+.navbar a{
+padding: 20px 0;
+display: inline-block;
+color: #fff;
+text-decoration: none;
+text-transform: capitalize;
+transition: 0.2s;
+}
+
+.navbar a:hover{
+color: #ddd;
+}
+
+/* Home Page */
+
+.homepage{
+position: relative;
+height: 100vh;
+width: 100%;
+background: url(Images/0002.png);
+background-size: cover;
+background-position: center;
+}
+
+.homepage::before{
+content: '';
+position: absolute; 
+height: 100%;
+width: 100%;
+top: 0;
+left: 0;
+background: rgba(0,0,0,0.2)
+}
+
+.homepage .content{
+ position: relative;
+height: 85%;
+flex-direction: column;
+justify-content: center;
+}
+
+.homepage .text{
+color: #fff;
+text-align: center;
+margin-bottom: 50px;
+}
+
+.homepage .text h1{
+font-size: 60px;
+font-weight: 700;
+margin-bottom: 10px;
+}
+
+.homepage a{
+text-decoration: none;
+color: #333;
+background: #fff;
+padding: 10px 30px;
+border-radius: 8px;
+border: 2px solid #fff;
+}
