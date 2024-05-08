@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    
+} 
+/* The relevance of adding the before / after will be made clear once the actual collapsibles are designed */
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: url(Images/0344.png);
+    background-size: cover;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    z-index: 100;
+    }
+    
+    .flex{
+    display: flex;
+    align-items: center;
+    }
+    
+    .container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+    
+    .logo img {
+        height: auto;  /* maintain aspect ratio */
+        width: 75px;  /* or any size that fits well in the header */
+    }
+    
+    
+    .navbar{
+    justify-content: space-between;
+    }
+    
+    .nav-links{
+        gap: 20px;
+       list-style: none;
+    }
+    
+    .navbar a{
+    padding: 20px 0;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s;
+    }
+    
+    .navbar a:hover{
+    color: #ddd;
+    }
+
+    section{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        font-size: 15px;
+        align-items: center;
+        justify-content: center;
+        }
+
+.section-container{
+width: 100%;
+max-width: 80rem;
+margin: 0 auto;
+padding: 0 1.5rem;
+}
