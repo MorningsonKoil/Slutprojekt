@@ -1,0 +1,3 @@
+
+in Curriculum First Commit, faced an issue where running this code on another laptop made the text all junky within .section-container. Spent about an hour until I realized it's due to the usage of absolute pixel values, while the other laptop had it's own adjusted browser font-size (don't even know why). Found rem to fix this since apparently that's what it's supposed to do anyways? Still unsure on the details but it's a bug which was fixed
+
