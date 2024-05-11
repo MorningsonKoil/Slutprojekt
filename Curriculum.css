@@ -1,1 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
+      
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #34495e;
+    color: #fff;
+  }
+
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    z-index: 100;
+    }
+    
+    .flex{
+    display: flex;
+    align-items: center;
+    }
+    
+    .container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+    
+    .logo img {
+        height: auto;  /* maintain aspect ratio */
+        width: 75px;  /* or any size that fits well in your header */
+    }
+    
+    
+    .navbar{
+    justify-content: space-between;
+    }
+    
+    .nav-links{
+        gap: 20px;
+       list-style: none;
+    }
+    
+    .navbar a{
+    padding: 20px 0;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s;
+    }
+    
+    .navbar a:hover{
+    color: #ddd;
+    }
+
+  
+  h1 {
+    text-align: center;
+    margin-top: 10rem;
+    font-size: 2.5rem;
+  }
+  
+  .accordion {
+    justify-content: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+  }
+  .accordion-item {
+    background-color: #fff;
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  }
+  .accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+  }
+  .accordion-item-header.active::after {
+    content: "\2212";
+  }
+  .accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+  }
+
+li{
+list-style: none;;
+margin-left: 5px;
+  }
+  
+  @media(max-width:500px) {
+    html {
+      font-size: 14px;
+    }
+  }
