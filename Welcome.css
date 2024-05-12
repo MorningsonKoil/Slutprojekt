@@ -191,4 +191,60 @@ footer{
     transition: 0.2s;
     }
 
+ #menu-toggler, #hamburger-btn{
+        display: none;
+        }
+
+@media (width < 600px){
+
+    .navbar .nav-links{
+        left: 0;
+        position: fixed;
+        top: 65px;
+        height: 100%;
+        display: block;
+        background: #333;
+        width: 50vh;
+        padding-left: 20px;
+        padding-top: 30px;
+        margin-top: 30px;
+        left: -100%;
+        transition: all 0.4s ease;
+        }
+        
+        #menu-toggler:checked ~ .nav-links{
+        left: 0;
+        }
+        
+        .nav-links li{
+        font-size: 18px;
+        }
+        
+        #hamburger-btn{
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        }
+
+    section .cards .card{
+    width: calc(100% / 2 - 20px); 
+ /*Basically, they each take up half the width, but then I obviously want a gap between them, hence the - 20px*/
+    }
+
+    header .container{
+        max-width: 60vh;
+    }
+    .homepage{
+width: 80vh;
+}
+
+.homepage .text h1{
+font-size: 30px;
+margin-bottom: 30px;
+
+}
+}
+
+
 
