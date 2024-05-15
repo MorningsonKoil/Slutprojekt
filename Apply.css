@@ -15,6 +15,57 @@ justify-content: center;
 padding: 20px;
 }
 
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    z-index: 100;
+    }
+    
+    .flex{
+    display: flex;
+    align-items: center;
+    }
+    
+    .contain{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    }
+    
+    .logo img {
+        height: auto;  /* maintain aspect ratio */
+        width: 75px;  /* or any size that fits well in your header */
+    }
+    
+    
+    .navbar{
+    justify-content: space-between;
+    }
+    
+    .nav-links{
+        gap: 20px;
+       list-style: none;
+    }
+    
+    .navbar a{
+    padding: 20px 0;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s;
+    }
+    
+    .navbar a:hover{
+    color: #ddd;
+    }
+
+
 .container{
     position: relative;
     max-width: 700px;
@@ -130,7 +181,7 @@ background-color:aquamarine;
 
 /* Responsive Code for screens 450px and below */
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 600px){
 
 .form-column{
 flex-wrap: wrap;
@@ -139,4 +190,45 @@ flex-wrap: wrap;
 .form :where(.gender-options, .gender){
 row-gap: 15px;
 }
+
+    .navbar .nav-links{
+        left: 0;
+        position: fixed;
+        top: 65px;
+        height: 100%;
+        display: block;
+        background: #333;
+        width: 50vh;
+        padding-left: 20px;
+        padding-top: 30px;
+        margin-top: 30px;
+        left: -100%;
+        transition: all 0.4s ease;
+        }
+        
+        #menu-toggler:checked ~ .nav-links{
+        left: 0;
+        }
+        
+        .nav-links li{
+        font-size: 18px;
+        }
+        
+        #hamburger-btn{
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        }
+    
+
+    .contain{
+    width: 50%;
+    }
+
+
+    .container{
+        margin-top: 20vh;
+
+    }
 }
