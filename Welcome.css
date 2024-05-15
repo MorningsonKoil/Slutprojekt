@@ -19,7 +19,7 @@ display: flex;
 align-items: center;
 }
 
-.container{
+.contain{
 max-width: 1200px;
 width: 100%;
 margin: 0 auto;
@@ -191,16 +191,15 @@ footer{
     transition: 0.2s;
     }
 
- #menu-toggler, #hamburger-btn{
+   #menu-toggler, #hamburger-btn{
         display: none;
         }
 
 @media (width < 600px){
-
     .navbar .nav-links{
         left: 0;
         position: fixed;
-        top: 65px;
+        top: 40px;
         height: 100%;
         display: block;
         background: #333;
@@ -227,23 +226,21 @@ footer{
         cursor: pointer;
         }
 
+        .nav-links.flex{
+        display: none;
+        }
+    
+
+    .contain{
+    width: 50%;
+    }
+
+
     section .cards .card{
     width: calc(100% / 2 - 20px); 
  /*Basically, they each take up half the width, but then I obviously want a gap between them, hence the - 20px*/
     }
 
-    header .container{
-        max-width: 60vh;
-    }
-    .homepage{
-width: 80vh;
-}
-
-.homepage .text h1{
-font-size: 30px;
-margin-bottom: 30px;
-
-}
 }
 
 
