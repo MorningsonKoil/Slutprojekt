@@ -4,3 +4,10 @@ in Curriculum First Commit, faced an issue where running this code on another la
 In the (supposedly) second curriculum commit, I faced an issue regarding how to hide the text within the collapsible prior to setting it. I set the height to 0, thinking that'd just make the text disappear. This obviously caused a problem when I wanted the text to re-appear but the height was still absolutely set to 0. The solution was to instead utilize max-height as opposed to normal height.
 
 Update: Decided to completely restart the curriculum site from scratch since the collapsibles I made simply weren't thought out well enough. The text was extremely buggy, spacing them relative to the header was a pain, the collapsibles themselves were too big and if their size were to have changed then I'd have to start from scratch regardless to retain their functionality. Collapsibiles just seem super messy all around and I'm sure the second attempt is bound to be as messy too.
+
+In attempting to make the universal header responsive, it seems like the width just isn't budging. No clue why this happens, but it leads to a bit of vertical scroll. Solution: added "
+    .contain{
+    width: 50%;
+    }
+". nesting divs made this harder to spot than expected.
+
