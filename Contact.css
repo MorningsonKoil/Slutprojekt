@@ -10,55 +10,56 @@ background-image: Url(Images/IQ_Background_Notes.png);
 background-size: cover;
 }
 
-/*Here is the code for the header. Decided to start off with it.*/
+/*Header*/
 
-header {
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    z-index: 100;
+    }
+    
+    .flex{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-}
-
-.logo img {
-    height: 50px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
+    }
+    
+    .contain{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    padding: 0 15px;
-}
-
-nav ul li a {
-    color: white;
+    }
+    
+    .logo img {
+        height: auto;  /* maintain aspect ratio */
+        width: 75px;  /* or any size that fits well in your header */
+    }
+    
+    
+    .navbar{
+    justify-content: space-between;
+    }
+    
+    .nav-links{
+        gap: 20px;
+       list-style: none;
+    }
+    
+    .navbar a{
+    padding: 20px 0;
+    display: inline-block;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #ccc;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle .bar {
-    background-color: #fff;
-    height: 3px;
-    width: 25px;
-    margin: 3px 0;
-    transition: 0.3s;
-}
+    text-transform: capitalize;
+    transition: 0.2s;
+    }
+    
+    .navbar a:hover{
+    color: #ddd;
+    }
 
 /*Now the actual main code*/
 
@@ -84,6 +85,7 @@ background: #fff;
 .box{
 position: relative;
 display: grid;
+margin-top: 200px;
 grid-template-columns: 2fr 1fr;
 grid-template-rows: 5fr 4fr;
 grid-template-areas:
@@ -197,27 +199,12 @@ width: 100%;
 height: 100%;
 }
 
-
-/* Media Query for Screens 440px and below - as of now just for the burger-menu*/
-@media (max-width: 440px) {
-    .menu-toggle {
-        display: flex;
+#menu-toggler, #hamburger-btn{
+    display: none;
     }
 
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul li {
-        text-align: center;
-        padding: 10px;
-    }
+/* Media Query for Screens 450px and below */
+@media (max-width: 600px) {
 .contactUs{
 padding: 20px;
 }
@@ -251,4 +238,40 @@ padding: 30px;
     min-height: 300px;
     padding: 30px;
     }
-}
+
+    
+        .navbar .nav-links{
+            left: 0;
+            position: fixed;
+            top: 65px;
+            height: 100%;
+            display: block;
+            background: #333;
+            width: 50vh;
+            padding-left: 20px;
+            padding-top: 30px;
+            margin-top: 30px;
+            left: -100%;
+            transition: all 0.4s ease;
+            }
+            
+            #menu-toggler:checked ~ .nav-links{
+            left: 0;
+            }
+            
+            .nav-links li{
+            font-size: 18px;
+            }
+            
+            #hamburger-btn{
+            display: block;
+            color: #fff;
+            font-size: 22px;
+            cursor: pointer;
+            }
+        
+    
+        .contain{
+        width: 50%;
+        }
+    }
