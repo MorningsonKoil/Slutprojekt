@@ -183,9 +183,9 @@ background-color:aquamarine;
     }
 
 
-/* Responsive Code for screens 500px and below */
+/* Responsive Code for screens 550px and below */
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 550px){
 
 .form-column{
 flex-wrap: wrap;
