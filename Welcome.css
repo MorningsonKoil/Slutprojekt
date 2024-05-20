@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+html{
+overflow-x: hidden;
+}
+
+body{
+background: #f2f2f2;
+}
+
 header{
 position: fixed;
 top: 0;
@@ -23,7 +31,7 @@ align-items: center;
 max-width: 1200px;
 width: 100%;
 margin: 0 auto;
-padding: 0 20px;
+padding: 0;
 }
 
 .logo img {
@@ -101,6 +109,9 @@ background: #fff;
 padding: 10px 30px;
 border-radius: 8px;
 border: 2px solid #fff;
+box-shadow: rgba(0,0,0,0.3);
+font-size: 18px;
+transition: 0.4s;
 }
 
 .homepage a:hover{
@@ -149,7 +160,6 @@ section .card p{
 margin-top: 5px;
 }
 
-/* Taken directly from the About Page, too lazy to do the footer again, but might change it for later */
 footer{
     position: relative;
     width: 100%;
@@ -191,7 +201,7 @@ footer{
     transition: 0.2s;
     }
 
-   #menu-toggler, #hamburger-btn{
+    #menu-toggler, #hamburger-btn{
         display: none;
         }
 
@@ -240,6 +250,8 @@ footer{
     width: calc(100% / 2 - 20px); 
  /*Basically, they each take up half the width, but then I obviously want a gap between them, hence the - 20px*/
     }
+
+
 
 }
 
