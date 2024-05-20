@@ -12,3 +12,5 @@ In attempting to make the universal header responsive, it seems like the width j
 ". nesting divs made this harder to spot than expected.
 
 Font-awesome icons for some reason also didn't work initially. After continous digging, realized that the type of font you use actually impacts their appearance (since the icons do have the property of font), and the type of font I had for that specific div didn't allow their appearance. Changed accordingly so the font is fixed as normal.
+
+The community card in the about page kept overflowing when I tried to make it responsive. Fixed by changing the width from 335px to simply width: fit-content; which changes how they look compared to before but honestly I liked the new look more anyways.
