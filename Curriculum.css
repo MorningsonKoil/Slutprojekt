@@ -25,11 +25,11 @@
     align-items: center;
     }
     
-    .container{
+    .contain{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
     }
     
     .logo img {
@@ -59,7 +59,6 @@
     .navbar a:hover{
     color: #ddd;
     }
-
   
   h1 {
     text-align: center;
@@ -115,14 +114,12 @@ li{
 list-style: none;;
 margin-left: 5px;
   }
+
   #menu-toggler, #hamburger-btn{
     display: none;
     }
   
-  @media(width < 600px) {
-    html {
-      font-size: 14px;
-    }
+  @media(max-width: 600px) {
     .navbar .nav-links{
       left: 0;
       position: fixed;
@@ -157,4 +154,5 @@ margin-left: 5px;
   .contain{
   width: 50%;
   }
+
   }
